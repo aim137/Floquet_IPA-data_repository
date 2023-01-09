@@ -1,0 +1,55 @@
+#                                                                     
+#                                                                     
+# Y88b    /   e           e    e      888~~\    ,88~-_                
+#  Y88b  /   d8b         d8b  d8b     888   |  d888   \               
+#   Y88b/   /Y88b       d888bdY88b    888 _/  88888    |              
+#    Y8Y   /  Y88b     / Y88Y Y888b   888  \  88888    |              
+#     Y   /____Y88b   /   YY   Y888b  888   |  Y888   /               
+#    /   /      Y88b /          Y888b 888__/    `88_-~                
+#                                                                     
+#                                                                     
+# Version 5.1.0 Revision 20443 Hash (prev commit) 50993453a           
+#                   Branch is devel-fl                                
+#              MPI+SLK+SLEPC+HDF5_IO Build                            
+#               http://www.yambo-code.org                             
+#
+#
+#     E [eV]            X/Im[cm/stV](x)    X/Re[cm/stV](x)    X/Im[cm/stV](y)    X/Re[cm/stV](y)    X/Im[cm/stV](z)    X/Re[cm/stV](z)
+#
+      1.0000000         0.44621183E-20     0.46917031E-08     0.44619488E-20    -0.47287036E-08    -0.21797152E-24     0.24404507E-06
+# 
+# 07/28/2022 at 09:10 yambo_nl @ asellota05 [start]
+# 07/28/2022 at 09:20                       [end]
+#  
+# Timing   [Min/Max/Average]: 08m-25s/09m-25s/09m-09s
+#
+# .-Input file  out_job06_LR_hd/i6-fl-LR_job06
+# | floptics                         # [R] Floquet approach to Non-linear spectroscopy
+# | BoseTemp= 0.000000         eV    # Bosonic Temperature
+# | NL_CPU= "112"                    # [PARALLEL] CPUs for each role
+# | NL_ROLEs= "k"                    # [PARALLEL] CPUs roles (w,k)
+# | DIP_CPU= "4.2.14"                # [PARALLEL] CPUs for each role
+# | DIP_ROLEs= "v.c.k"               # [PARALLEL] CPUs roles (k,c,v)
+# | % NLBands
+# |   2 | 10 |                           # [NL] Bands range
+# | %
+# | % NLEnRange
+# |  1.000000 | 6.000000 |         eV    # [NL] Energy range
+# | %
+# | NLEnSteps= 1                     # [NL] Energy steps
+# | NLDamping= 0.040000        eV    # [NL] Damping (or dephasing)
+# | NLCorrelation= "IPA"             # [NL] Correlation ("IPA/HARTREE/TDDFT/LRC/LRW/JGM/SEX")
+# | HARRLvcs= 10417            RL    # [HA] Hartree     RL components
+# | EXXRLvcs= 10417            RL    # [XX] Exchange    RL components
+# | % ExtF_Dir
+# |  0.707107 | 0.707107 | 0.000000 |        # [NL ExtF] Field Versor
+# | %
+# | Xorder= 1                        # [FL] Max order of the response/exc functions
+# | Xadd_mode=  5                    # [FL] Additional modes to ensure convercence
+# | Xthresh_1= 0.10000E-12           # [FL] Self-consistent threshold on 1st order response function
+# | Xthresh_2= 0.100000E-5           # [FL] Self-consistent threshold on 2nd order response function
+# | Xthresh_3= 0.10000E-11           # [FL] Self-consistent threshold on 3rd order response function
+# | FL_solver= "D"                   # [FL] Eigenproblem solver mode ("(D)IAGONALIZATION/(L)ANCZOS")
+# | FL_deg_thresh= 0.100000E-6       # [FL] Degeneracy threshold in KS band structure
+# | FL_deg_lift= 0.100000E-3         # [FL] Degeneracy lifting of KS band structure
+# | FL_max_it= 10                    # [FL] Maximum number of iterations

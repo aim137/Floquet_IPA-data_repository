@@ -1,0 +1,36 @@
+&control
+  calculation = 'nscf',
+  prefix = 'AlAs',
+  outdir = 'run_output'
+  pseudo_dir = 'PPs',
+  wf_collect=.true.
+  nstep = 200 
+  verbosity = 'high' 
+/
+&system
+  ibrav = 2,
+  celldm(1) = 10.6959 
+  nat = 2,
+  ntyp = 2,
+  ecutwfc = 40,
+  nbnd = 15
+  force_symmorphic=.true.
+/
+&electrons
+   electron_maxstep = 100
+   conv_thr = 1.0d-10
+   mixing_mode = 'plain'
+   mixing_beta = 0.7
+   mixing_ndim = 8
+   diagonalization = 'cg'
+   diago_full_acc = .true.
+   diago_thr_init =  1.0d-6
+/
+ATOMIC_SPECIES 
+ Al 1.0 Al.pz-vbc.UPF
+ As 1.0 As.pz-bhs.UPF  
+ATOMIC_POSITIONS crystal 
+ Al  0.0  0.0  0.0
+ As  0.25 0.25 0.25
+K_POINTS (automatic)
+10 10 10 0 0 0

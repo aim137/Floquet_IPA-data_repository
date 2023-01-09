@@ -1,0 +1,5 @@
+&bands
+  outdir = 'run_output'
+  prefix = 'MoS2_2D'
+ filband = 'bands_MoS2_2D'
+/

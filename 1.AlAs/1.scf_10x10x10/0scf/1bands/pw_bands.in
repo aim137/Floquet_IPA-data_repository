@@ -1,0 +1,42 @@
+&control
+  calculation = 'nscf',
+  prefix = 'AlAs',
+  outdir = 'run_output'
+  pseudo_dir = 'PPs',
+  wf_collect=.true.
+  nstep = 200 
+  verbosity = 'high' 
+/
+&system
+  ibrav = 2,
+  celldm(1) = 10.6959 
+  nat = 2,
+  ntyp = 2,
+  ecutwfc = 40,
+  nbnd = 15
+/
+&electrons
+   electron_maxstep = 100
+   conv_thr = 1.0d-10
+   mixing_mode = 'plain'
+   mixing_beta = 0.7
+   mixing_ndim = 8
+   diagonalization = 'cg'
+   diago_full_acc = .true.
+/
+ATOMIC_SPECIES 
+ Al 1.0 Al.pz-vbc.UPF
+ As 1.0 As.pz-bhs.UPF  
+ATOMIC_POSITIONS crystal 
+ Al  0.0  0.0  0.0
+ As  0.25 0.25 0.25
+K_POINTS (crystal_b)
+8
+0.0000000000  0.0000000000  0.0000000000 50
+0.5000000000  0.0000000000  0.5000000000 50
+0.6250000000  0.2500000000  0.6250000000 1
+0.3750000000  0.3750000000  0.7500000000 50
+0.0000000000  0.0000000000  0.0000000000 50
+0.5000000000  0.5000000000  0.5000000000 50
+0.5000000000  0.2500000000  0.7500000000 50
+0.5000000000  0.0000000000  0.5000000000 1

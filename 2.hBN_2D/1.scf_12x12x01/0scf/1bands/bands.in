@@ -1,0 +1,5 @@
+&bands
+  outdir = 'run_output'
+  prefix = 'hBN_2D'
+ filband = 'bands_hBN_2D'
+/

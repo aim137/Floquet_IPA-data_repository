@@ -1,0 +1,28 @@
+&control
+  calculation = 'scf',
+  restart_mode='from_scratch',
+  prefix = 'Silicon',
+  outdir = 'run_output'
+  pseudo_dir = 'PPs',
+  wf_collect=.true.
+  nstep = 200 
+  verbosity = 'high' 
+/
+ &system
+    ibrav=2,
+    celldm(1)=10.183,
+    nat=2, 
+    ntyp=1,
+    ecutwfc=15.0,
+/&end
+ &electrons
+    diago_full_acc=.true.,
+    conv_thr = 1.0d-8
+/&end
+ATOMIC_SPECIES
+ Si  28.086  Si.vbc.UPF
+ATOMIC_POSITIONS
+ Si 0.00 0.00 0.00
+ Si 0.25 0.25 0.25
+K_POINTS (automatic)
+08 08 08 0 0 0

@@ -1,0 +1,5 @@
+&bands
+  outdir = 'run_output'
+  prefix = 'AlAs'
+ filband = 'bands_AlAs'
+/

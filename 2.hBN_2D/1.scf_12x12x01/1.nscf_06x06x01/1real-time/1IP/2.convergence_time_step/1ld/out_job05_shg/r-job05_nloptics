@@ -1,0 +1,769 @@
+                                                                          
+                                                                          
+    Y88b    /   e           e    e      888~~\    ,88~-_                  
+     Y88b  /   d8b         d8b  d8b     888   |  d888   \                 
+      Y88b/   /Y88b       d888bdY88b    888 _/  88888    |                
+       Y8Y   /  Y88b     / Y88Y Y888b   888  \  88888    |                
+        Y   /____Y88b   /   YY   Y888b  888   |  Y888   /                 
+       /   /      Y88b /          Y888b 888__/    `88_-~                  
+                                                                          
+                                                                          
+    Version 5.1.0 Revision 20443 Hash (prev commit) 50993453a             
+                      Branch is devel-fl                                  
+                 MPI+SLK+SLEPC+HDF5_IO Build                              
+                  http://www.yambo-code.org                               
+ 
+ 07/12/2022 at 16:53 yambo_nl @ asellota14
+ ==================================================
+
+ Cores-Threads       : 112(CPU)-1(threads)-1(threads@X)-1(threads@DIP)-1(threads@SE)-1(threads@RT)-1(threads@K)-1(threads@NL)
+ MPI Cores           :  112
+ Threads per core    :  1
+ Threads total       :  112
+ Nodes Computing     :   4
+ Nodes IO            :  1
+
+ Fragmented WFs      : yes
+ CORE databases      : ../../../
+ Additional I/O      : .
+ Communications      : out_job05_shg
+ Input file          : out_job05_shg/i5-nl-shg_job05
+ Report file         : out_job05_shg/r-job05_nloptics
+ Verbose log/report  : no
+ Log files           : out_job05_shg/LOG
+
+ Job   string        : job05
+
+ Precision           : DOUBLE
+  
+ [RD../../..//SAVE//ns.db1]------------------------------------------------------
+  Bands                                            :  20
+  K-points                                         :   36
+  G-vectors                                        :  21817 [RL space]
+  Components                                       :  2736 [wavefunctions]
+  Symmetries                                       :  2 [spatial]
+  Spinor components                                :  1
+  Spin polarizations                               :  1
+  Temperature                                      :  0.000000 [eV]
+  Electrons                                        :  8.000000
+  WF G-vectors                                     :   3945
+  Max atoms/species                                :  1
+  No. of atom species                              :  2
+  Exact exchange fraction in XC                    :  0.000000
+  Exact exchange screening in XC                   :  0.000000
+  Magnetic symmetries                              : no
+ - S/N 002650 ---------------------------------------------- v.05.01.00 r.20389 -
+
+ [02] CORE Variables Setup
+ =========================
+
+
+  [02.01] Unit cells
+  ==================
+
+  Cell kind             :  HCP
+  Atoms in the cell     :  B  N
+  number of B  atoms    :  1
+  number of N  atoms    :  1
+
+  List of atomic masses
+  Mass of B     :  10.00000
+  Mass of N     :  14.00000
+
+  List of atomic coordinates    : [cc]
+  B1       :  2.358000  1.361392  0.000000  order 1
+  N1       : -2.358000 -1.361392  0.000000  order 2
+
+  Alat factors          :   4.71600   4.08418  33.01200 [a.u.]
+  Direct lattice volume :  635.8432 [a.u.]
+  Direct lattice vectors:  A[ 1 ]  A[ 2 ]  A[ 3 ]
+   A[ 1 ]:  1.000000  0.000000  0.000000  [iru]
+   A[ 2 ]: -0.500000  1.000000  0.000000  [iru]
+   A[ 3 ]:  0.000000  0.000000  1.000000  [iru]
+
+  Recip. lattice volume :  0.390112 [a.u.]
+  Recip. lattice vectors:  B[ 1 ]  B[ 2 ]  B[ 3 ]
+   B[ 1 ]:  1.000000  0.500000  0.000000  [iku]
+   B[ 2 ]:  0.000000  1.000000  0.000000  [iku]
+   B[ 3 ]:  0.000000  0.000000  1.000000  [iku]
+   
+
+  [02.02] Symmetries
+  ==================
+
+  Inversion symmetry    : no
+  Spatial inversion     : no
+  K-space Time-reversal : no
+  Magnetic symmetries   : no
+  Group table correct   : yes
+  Symmetries units      :  [cc]
+
+   [S 1]:  1.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  1.000000
+   [S 2]:  1.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000 -1.000000
+
+  [02.03] Reciprocal space
+  ========================
+
+  nG shells         :  1080
+  nG charge         :  21817
+  nG WFs            :   3945
+  nC WFs            :  2736
+  G-vecs. in first 80 shells:  [ Number ]
+    1   3   5   7   9  11  13  15  17
+    23   35   47   59   61   73   85   87   99
+   111  113  125  127  139  151  153  165  173
+   185  197  209  221  233  245  247  259  271
+    283   285   297   315   327   339   351   363   375
+    387   389   401   413   425   437   449   461   463
+    475   487   499   511   513   525   537   549   561
+    573   575   587   599   611   623   625   637   661
+    685   709   721   745   769   793   795   807
+  ...
+  Shell energy in first 80 shells:  [ mHa ]
+    0.00000      18.1128      72.4513      163.015      289.805      452.820      652.061      887.528      1159.22   
+    1183.37      1201.48      1255.82      1346.39      1467.14      1473.18      1636.19      1811.28      1835.43   
+    2070.90      2191.65      2342.59      2608.25      2650.51      2994.65      3061.07      3375.02      3550.11   
+    3568.22      3622.56      3713.13      3791.62      3839.92      4002.93      4075.38      4202.17      4244.44   
+    4437.64      4636.88      4709.33      4733.48      4751.60      4805.93      4896.50      5017.25      5023.29   
+    5186.30      5234.60      5258.76      5361.39      5385.54      5621.01      5741.76      5820.25      5868.55   
+    5892.70      6158.36      6200.62      6417.98      6538.73      6544.77      6611.18      6925.13      7051.92   
+    7100.22      7245.13      7341.73      7625.50      7722.10      7794.55      7987.75      8186.99      8283.60   
+    8301.71      8356.05      8428.50      8446.61      8573.40      8736.42      8766.60      8784.72   
+  ...
+
+  [02.04] K-grid lattice
+  ======================
+
+  Compatible Grid is   : 2D
+  Base K vectors       :  K_min[ 1 ]  K_min[ 2 ]  K_min[ 3 ]
+  K_min[ 1 ] :  0.000000  0.166667  0.000000 [rlu]
+  K_min[ 2 ] :  0.166667    -0.512709E-8   0.00000    [rlu]
+  Grid dimensions      :   6   6
+  K lattice UC volume  :  0.010836 [a.u.]
+
+  [02.05] Energies & Occupations
+  ==============================
+
+  [X] === General ===
+  [X] Electronic Temperature                        :  0.000000  0.000000 [eV K]
+  [X] Bosonic    Temperature                        :  0.000000  0.000000 [eV K]
+  [X] Finite Temperature mode                       : no
+  [X] El. density                                   :  0.84906E+23 [cm-3]
+  [X] Fermi Level                                   : -3.915400 [eV]
+
+  [X] === Gaps and Widths ===
+  [X] Conduction Band Min                           :  4.401742 [eV]
+  [X] Valence Band Max                              :  0.000000 [eV]
+  [X] Filled Bands                                  :   4
+  [X] Empty Bands                                   :   5  20
+  [X] Direct Gap                                    :  4.401742 [eV]
+  [X] Direct Gap localized at k-point               :   7
+  [X] Indirect Gap                                  :  4.401742 [eV]
+  [X] Indirect Gap between k-points                 :   7   7
+  [X] Last valence band width                       :  3.427571 [eV]
+  [X] 1st conduction band width                     :  2.826111 [eV]
+   
+   
+
+ [03] Transferred momenta grid and indexing
+ ==========================================
+
+ [RD../../..//SAVE//ndb.kindx]---------------------------------------------------
+  Fragmentation                                    : no
+  Polarization last K                              :   36
+  QP states                                        :    1   36
+  X grid is uniform                                : yes
+  Grids                                            : X S
+  BS scattering                                    : no
+  COLL scattering                                  : no
+  Sigma scattering                                 : yes
+  X scattering                                     : yes
+ - S/N 002650 ---------------------------------------------- v.05.01.00 r.20389 -
+
+ IBZ Q-points :   36
+ BZ  Q-points :   36
+
+ K/Q-points units:
+ rlu = crystal or reduced units; cc = cartesian coordinates; iku = interal k-units
+
+ Q [ 1]:  0.000000  0.000000  0.000000 [rlu]
+ Q [ 2]:  0.000000  0.166667  0.000000 [rlu]
+ Q [ 3]:  0.000000  0.333333  0.000000 [rlu]
+ Q [ 4]:  0.000000 -0.500000  0.000000 [rlu]
+ Q [ 5]:  0.166667  0.166667  0.000000 [rlu]
+ Q [ 6]:  0.166667  0.333333  0.000000 [rlu]
+ Q [ 7]:  0.333333  0.333333  0.000000 [rlu]
+ Q [ 8]: -0.166667     0.512709E-8   0.00000    [rlu]
+ Q [ 9]: -0.333333     0.102542E-7   0.00000    [rlu]
+ Q [10]:  0.333333 -0.333333  0.000000 [rlu]
+ Q [11]:  0.000000 -0.333333  0.000000 [rlu]
+ Q [12]:  0.333333    -0.102542E-7   0.00000    [rlu]
+ Q [13]: -0.333333  0.333333  0.000000 [rlu]
+ Q [14]:  0.166667 -0.166667  0.000000 [rlu]
+ Q [15]:  0.500000    -0.153813E-7   0.00000    [rlu]
+ Q [16]: -0.500000  0.500000  0.000000 [rlu]
+ Q [17]:  0.000000 -0.166667  0.000000 [rlu]
+ Q [18]: -0.166667  0.333333  0.000000 [rlu]
+ Q [19]: -0.333333  0.166667  0.000000 [rlu]
+ Q [20]:  0.166667 -0.333333  0.000000 [rlu]
+ Q [21]: -0.166667 -0.166667  0.000000 [rlu]
+ Q [22]:  0.333333 -0.166667  0.000000 [rlu]
+ Q [23]:  0.166667    -0.512709E-8   0.00000    [rlu]
+ Q [24]: -0.166667  0.500000  0.000000 [rlu]
+ Q [25]: -0.500000  0.166667  0.000000 [rlu]
+ Q [26]:  0.333333 -0.500000  0.000000 [rlu]
+ Q [27]: -0.333333 -0.166667  0.000000 [rlu]
+ Q [28]:  0.500000 -0.333333  0.000000 [rlu]
+ Q [29]: -0.166667 -0.333333  0.000000 [rlu]
+ Q [30]:  0.166667 -0.500000  0.000000 [rlu]
+ Q [31]:  0.500000 -0.166667  0.000000 [rlu]
+ Q [32]: -0.333333  0.500000  0.000000 [rlu]
+ Q [33]:  0.333333  0.166667  0.000000 [rlu]
+ Q [34]: -0.500000  0.333333  0.000000 [rlu]
+ Q [35]: -0.166667  0.166667  0.000000 [rlu]
+ Q [36]: -0.333333  0.666667  0.000000 [rlu]
+
+ [04] Dipoles
+ ============
+
+  System with reduced dimensionality
+  Smallest q vectors (crystal coordinates) :
+       0.166667      0.166667      0.000000
+  Lenght of G vectors in each direction:     1.53842185    1.53842193    0.19033034
+
+ [WARNING][DIP] Database not correct or missing. To be computed
+ [WF-Oscillators/G space/Overlaps loader] Normalization (few states)  min/max  :  0.18938E-09   1.0000    
+
+
+ [WARNING] Covariant Dipoles not in 3d. Assuming non periodic system.
+ Using forth order approximation for covariant dipoles
+ [RD../../..//SAVE//ns.kb_pp_pwscf]----------------------------------------------
+  Fragmentation                                    : yes
+ - S/N 002650 ---------------------------------------------- v.05.01.00 r.20389 -
+ [WR./job05//ndb.dipoles]--------------------------------------------------------
+  Brillouin Zone Q/K grids (IBZ/BZ)                :   36   36   36   36
+  RL vectors                                       :   3951 [WF]
+  Fragmentation                                    : yes
+  Electronic Temperature                           :  0.000000 [K]
+  Bosonic    Temperature                           :  0.000000 [K]
+  DIP band range                                   :   1   8
+  DIP band range limits                            :   8   1
+  DIP e/h energy range                             : -1.000000 -1.000000 [eV]
+  RL vectors in the sum                            :   3951
+  [r,Vnl] included                                 : yes
+  Bands ordered                                    : no
+  Direct v evaluation                              : yes
+  Approach used                                    : Covariant
+  Dipoles computed                                 : R V P
+  Wavefunctions                                    : Slater exchange(X)+Perdew & Zunger(C)
+ - S/N 002650 ---------------------------------------------- v.05.01.00 r.20443 -
+ [WR./job05//ndb.Overlap]--------------------------------------------------------
+  Brillouin Zone Q/K grids (IBZ/BZ)                :   36   36   36   36
+  RL vectors                                       :   3951 [WF]
+  Fragmentation                                    : yes
+  Electronic Temperature                           :  0.000000 [K]
+  Bosonic    Temperature                           :  0.000000 [K]
+  DIP band range                                   :   1   8
+  DIP band range limits                            :   8   1
+  DIP e/h energy range                             : -1.000000 -1.000000 [eV]
+  RL vectors in the sum                            :   3951
+  [r,Vnl] included                                 : yes
+  Bands ordered                                    : no
+  Direct v evaluation                              : yes
+  Approach used                                    : Covariant
+  Dipoles computed                                 : R V P
+  Wavefunctions                                    : Slater exchange(X)+Perdew & Zunger(C)
+ - S/N 002650 ---------------------------------------------- v.05.01.00 r.20443 -
+
+ [05] NL Initialization
+ ======================
+
+ Total simulation time       :  235.0000 [fs]
+
+  [05.01] Messaging
+  =================
+
+  ---General---
+  Integrator                 : INVINT
+  Simulation time            :  234.9975 [fs]
+  Step length                :  0.007500 [fs]
+  NE Steps                   :  31334
+  Correlation                IPA
+  Damping                    :  0.040000 [eV]
+  Dephasing                  :  32.91059 [fs]
+  Efield                     SIN
+  Efield width               :  0.000000 [fs]
+  Efield T_0                 :  0.000000 [fs]
+  Efield Amplitude      [V/m]:  0.194095E+7
+  Frequencies range          :   0.20000  10.00000
+  Frequencies steps          :   501
+  Frequency   step           :  0.019561
+  Use Dipoles                : no
+  Induced Field              : no
+  Force Snd Order Dipoles    : no
+  Evaluate Current           : no
+  WF sampling                : no
+  [RD./job05//ndb.dipoles]--------------------------------------------------------
+   Brillouin Zone Q/K grids (IBZ/BZ)                :   36   36   36   36
+   RL vectors                                       :   3951 [WF]
+   Fragmentation                                    : yes
+   Electronic Temperature                           :  0.000000 [K]
+   Bosonic    Temperature                           :  0.000000 [K]
+   DIP band range                                   :   1   8
+   DIP band range limits                            :   8   1
+   DIP e/h energy range                             : -1.000000 -1.000000 [eV]
+   RL vectors in the sum                            :   3951
+   [r,Vnl] included                                 : yes
+   Bands ordered                                    : no
+   Direct v evaluation                              : yes
+   Approach used                                    : Covariant
+   Dipoles computed                                 : R V P
+   Wavefunctions                                    : Slater exchange(X)+Perdew & Zunger(C)
+  - S/N 002650 ---------------------------------------------- v.05.01.00 r.20443 -
+  [RD./job05//ndb.Overlap]--------------------------------------------------------
+   Brillouin Zone Q/K grids (IBZ/BZ)                :   36   36   36   36
+   RL vectors                                       :   3951 [WF]
+   Fragmentation                                    : yes
+   Electronic Temperature                           :  0.000000 [K]
+   Bosonic    Temperature                           :  0.000000 [K]
+   DIP band range                                   :   1   8
+   DIP band range limits                            :   8   1
+   DIP e/h energy range                             : -1.000000 -1.000000 [eV]
+   RL vectors in the sum                            :   3951
+   [r,Vnl] included                                 : yes
+   Bands ordered                                    : no
+   Direct v evaluation                              : yes
+   Approach used                                    : Covariant
+   Dipoles computed                                 : R V P
+   Wavefunctions                                    : Slater exchange(X)+Perdew & Zunger(C)
+  - S/N 002650 ---------------------------------------------- v.05.01.00 r.20443 -
+
+   [05.01.01] External/Internal QP corrections
+   ===========================================
+
+   [QP_apply] Action to be applied: USER defined scissor
+
+    [05.01.01.01]  QP corrections report
+    ====================================
+
+    [G+QP] === General ===
+    [G+QP] Electronic Temperature                     :  0.000000  0.000000 [eV K]
+    [G+QP] Bosonic    Temperature                     :  0.000000  0.000000 [eV K]
+    [G+QP] Finite Temperature mode                    : no
+    [G+QP] El. density                                :  0.84906E+23 [cm-3]
+    [G+QP] Fermi Level                                :  0.000000 [eV]
+
+    [G+QP] === Gaps and Widths ===
+    [G+QP] Conduction Band Min                        :  7.701742 [eV]
+    [G+QP] Valence Band Max                           :  0.000000 [eV]
+    [G+QP] Filled Bands                               :   4
+    [G+QP] Empty Bands                                :   5  20
+    [G+QP] Direct Gap                                 :  7.701742 [eV]
+    [G+QP] Direct Gap localized at k-point            :   7
+    [G+QP] Indirect Gap                               :  7.701742 [eV]
+    [G+QP] Indirect Gap between k-points              :   7   7
+    [G+QP] Last valence band width                    :  3.427571 [eV]
+    [G+QP] 1st conduction band width                  :  2.826111 [eV]
+     
+     
+    [coarse-grid] Minimum Bare Gap        [ev]:  4.401742
+    [coarse-grid] Minimum Gap Correction  [ev]:  3.300000
+     
+    Eqp @ K [ 1]
+    -18.20077  -5.55313  -1.39166  -1.39165   7.87099   9.01610   9.27779  10.58076
+    Eqp @ K [ 2]
+    -17.67230  -4.82089  -3.44711  -2.33227   8.78103   9.85608  10.17339  11.39161
+    Eqp @ K [ 3]
+    -16.25830  -7.11196  -3.73331  -2.80247  10.26735  11.22403  12.76479  12.79276
+    Eqp @ K [ 4]
+    -15.13606  -9.13496  -4.32823  -0.99774   7.81183  12.72512  15.71245  16.21778
+    Eqp @ K [ 5]
+    -16.68633  -5.73531  -4.07815  -3.42757  10.52785  11.01484  11.95695  12.23671
+    Eqp @ K [ 6]
+    -15.21534  -8.31961  -5.49524  -1.18817   8.57262  13.73027  15.07987  15.37445
+    Eqp @ K [ 7]
+    -14.55100  -8.25445  -7.28470   0.00000   7.70174  15.23526  16.70585  17.77665
+    Eqp @ K [ 8]
+    -17.67230  -4.82089  -3.44711  -2.33227   8.78103   9.85608  10.17339  11.39161
+    Eqp @ K [ 9]
+    -16.25830  -7.11196  -3.73331  -2.80247  10.26735  11.22403  12.76479  12.79276
+    Eqp @ K [10]
+    -16.25830  -7.11196  -3.73331  -2.80247  10.26735  11.22403  12.76479  12.79276
+    Eqp @ K [11]
+    -16.25830  -7.11196  -3.73331  -2.80247  10.26735  11.22403  12.76479  12.79276
+    Eqp @ K [12]
+    -16.25830  -7.11196  -3.73331  -2.80247  10.26735  11.22403  12.76479  12.79276
+    Eqp @ K [13]
+    -16.25830  -7.11196  -3.73331  -2.80247  10.26735  11.22403  12.76479  12.79276
+    Eqp @ K [14]
+    -17.67230  -4.82089  -3.44711  -2.33227   8.78103   9.85608  10.17339  11.39161
+    Eqp @ K [15]
+    -15.13606  -9.13496  -4.32823  -0.99774   7.81183  12.72512  15.71245  16.21778
+    Eqp @ K [16]
+    -15.13606  -9.13496  -4.32823  -0.99774   7.81183  12.72512  15.71245  16.21778
+    Eqp @ K [17]
+    -17.67230  -4.82089  -3.44711  -2.33227   8.78103   9.85608  10.17339  11.39161
+    Eqp @ K [18]
+    -16.68633  -5.73531  -4.07815  -3.42757  10.52785  11.01484  11.95695  12.23671
+    Eqp @ K [19]
+    -16.68633  -5.73531  -4.07815  -3.42757  10.52785  11.01484  11.95695  12.23671
+    Eqp @ K [20]
+    -16.68633  -5.73531  -4.07815  -3.42757  10.52785  11.01484  11.95695  12.23671
+    Eqp @ K [21]
+    -16.68633  -5.73531  -4.07815  -3.42757  10.52785  11.01484  11.95695  12.23671
+    Eqp @ K [22]
+    -16.68633  -5.73531  -4.07815  -3.42757  10.52785  11.01484  11.95695  12.23671
+    Eqp @ K [23]
+    -17.67230  -4.82089  -3.44711  -2.33227   8.78103   9.85608  10.17339  11.39161
+    Eqp @ K [24]
+    -15.21534  -8.31961  -5.49524  -1.18817   8.57262  13.73027  15.07987  15.37445
+    Eqp @ K [25]
+    -15.21534  -8.31961  -5.49524  -1.18817   8.57262  13.73027  15.07987  15.37445
+    Eqp @ K [26]
+    -15.21534  -8.31961  -5.49524  -1.18817   8.57262  13.73027  15.07987  15.37445
+    Eqp @ K [27]
+    -15.21534  -8.31961  -5.49524  -1.18817   8.57262  13.73027  15.07987  15.37445
+    Eqp @ K [28]
+    -15.21534  -8.31961  -5.49524  -1.18817   8.57262  13.73027  15.07987  15.37445
+    Eqp @ K [29]
+    -15.21534  -8.31961  -5.49524  -1.18817   8.57262  13.73027  15.07987  15.37445
+    Eqp @ K [30]
+    -15.21534  -8.31961  -5.49524  -1.18817   8.57262  13.73027  15.07987  15.37445
+    Eqp @ K [31]
+    -15.21534  -8.31961  -5.49524  -1.18817   8.57262  13.73027  15.07987  15.37445
+    Eqp @ K [32]
+    -15.21534  -8.31961  -5.49524  -1.18817   8.57262  13.73027  15.07987  15.37445
+    Eqp @ K [33]
+    -15.21534  -8.31961  -5.49524  -1.18817   8.57262  13.73027  15.07987  15.37445
+    Eqp @ K [34]
+    -15.21534  -8.31961  -5.49524  -1.18817   8.57262  13.73027  15.07987  15.37445
+    Eqp @ K [35]
+    -17.67230  -4.82089  -3.44711  -2.33227   8.78103   9.85608  10.17339  11.39161
+    Eqp @ K [36]
+    -14.55100  -8.25445  -7.28470   0.00000   7.70174  15.23526  16.70585  17.77665
+
+ [06] NL Start and Restart
+ =========================
+
+  
+  * * * Polarization * * *
+ ==========================
+  Volume      635.84324066 bohr^3
+  Direction 1
+  Numer of k-points per string  6
+  Numer of different strings    6
+  Electronic Phase       -0.16127332   mod(2)
+  Ionic      Phase       -0.33333336   mod(1)
+  Total      Phase       -0.49460667   mod(1)
+  Polarization       -2.33256511  mod( 4.71600008) (e/Volume).bohr
+  Polarization       -0.00366846  mod( 0.00741692) e/bohr^2
+  Polarization       -0.20989003  mod( 0.42435745) C/m^2
+  
+  Direction 2
+  Numer of k-points per string  6
+  Numer of different strings    6
+  Electronic Phase        0.16127239   mod(2)
+  Ionic      Phase        0.33333337   mod(1)
+  Total      Phase        0.49460576   mod(1)
+  Polarization        2.33256070  mod( 4.71599983) (e/Volume).bohr
+  Polarization        0.00366845  mod( 0.00741692) e/bohr^2
+  Polarization        0.20988963  mod( 0.42435743) C/m^2
+  
+  The total polarization has module 1 !!
+  
+  
+  * * * Non-linear dynamics parameters * * *
+ ============================================
+  Initial Polarization      : -0.001794  0.001036  0.000000
+  Initial <Dip_x/y/z>       :  0.98270E-18 -0.43621E-18  0.97506E-11
+ [WR./job05//ndb.Nonlinear]------------------------------------------------------
+  Brillouin Zone Q/K grids (IBZ/BZ)                :   36   36   36   36
+  RL vectors                                       :  21817 [WF]
+  Global Gauge                                     : length
+  [RT] Time steps                                  :  31334
+  [RT] Time step                                   :  0.007500 [[fs]]
+  [NL] Damping                                     :  0.040000 [[fs]]
+  [NL] Bands  range                                :   1   8
+  [NL] Energy range                                :   0.20000  10.00000
+  [NL] Number of freqs                             :   501
+  [NL] Force 2nd approx                            : no
+  [NL] Use DIPOLES                                 : no
+  [NL] Induced Field                               : no
+  [NL] Number of G in HARTREE                      :  21817
+  [NL] Number of G in EXCHANGE(DFT)                :  21817
+  [NL] WF sample order                             : 0
+  [NL] WF sample valence                           : 0
+  [NL] WF sample kpoints                           : 0
+  [RT] Integrator                                  : INVINT
+  [NL] Correlation                                 : IPA
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity                               :   1000.00    [[kWCMm2]]
+  [FIELDs] Damping                                 :  0.000000 [[fs]]
+  [FIELDs] Frequency range                         :  0.100000  0.100000 [[eV]]
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step                          :  0.000000 [[eV]]
+  [FIELDs] Initial time                            :  0.007500 [[fs]]
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  0.669461  0.669461
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  1.217166  1.217166
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  1.764870  1.764870
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  2.312575  2.312575
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  2.860279  2.860279
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  3.407984  3.407984
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  3.955689  3.955689
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  4.503393  4.503393
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  5.051098  5.051098
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  5.598802  5.598802
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  6.146507  6.146507
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  6.694212  6.694212
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  7.241916  7.241916
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  7.789621  7.789621
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  8.337325  8.337325
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  8.885030  8.885030
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  9.432735  9.432735
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+  [FIELDs] Type                                    : SIN
+  [FIELDs] Versor                                  :  0.707107  0.707107  0.000000
+  [FIELDs] Intensity     [kWCMm2]                  :   1000.00   
+  [FIELDs] Field width       [fs]                  :  0.000000
+  [FIELDs] Frequency range   [eV]                  :  9.980439  9.980439
+  [FIELDs] Frequency steps                         :  1
+  [FIELDs] Frequency step    [eV]                  :  0.000000
+  [FIELDs] Initial time      [fs]                  :  0.007500
+  [FIELDs] Polarization                            : linear
+
+ Timing [Min/Max/Average]: 11m-31s/12m-41s/11m-59s
+
+ [07] Timing Overview
+ ====================
+
+ Clock: global (MAX - min (if any spread is present) clocks)
+             io_ATMPROJ_pwscf :      0.0000s P101 [MAX]      0.0000s P62 [min]
+                   io_COL_CUT :      0.0001s P102 [MAX]      0.0000s P91 [min]
+                 io_KB_abinit :      0.0000s P101 [MAX]      0.0000s P3 [min]
+                        io_BS :      0.0001s P40 [MAX]      0.0000s P91 [min]
+                        io_NL :      0.3105s P1 (     20 calls,  15.524 msec avg) [MAX]      0.0000s P12 (     18 calls,   0.002 msec avg) [min]
+                        io_HF :      0.0001s P85 [MAX]      0.0000s P91 [min]
+             io_RT_components :      0.0001s P53 (      2 calls,   0.064 msec avg) [MAX]      0.0000s P91 (      2 calls,   0.022 msec avg) [min]
+      IO_and_Messaging_switch :      0.0001s P29 (     21 calls,   0.005 msec avg) [MAX]      0.0001s P91 (     13 calls,   0.004 msec avg) [min]
+                io_COLLISIONS :      0.0002s P106 (      3 calls,   0.065 msec avg) [MAX]      0.0001s P91 (      3 calls,   0.021 msec avg) [min]
+               io_Double_Grid :      0.0002s P80 [MAX]      0.0001s P33 [min]
+                         io_X :      0.0002s P101 (      4 calls,   0.058 msec avg) [MAX]      0.0001s P106 (      4 calls,   0.023 msec avg) [min]
+                 PP_uspp_init :      0.0003s P14 (      7 calls,   0.041 msec avg) [MAX]      0.0001s P92 (      3 calls,   0.042 msec avg) [min]
+               LINEAR ALGEBRA :      0.0017s P87 (    304 calls,   0.005 msec avg) [MAX]      0.0006s P108 (    304 calls,   0.002 msec avg) [min]
+                    FFT_setup :      0.0065s P42 (      4 calls,   1.636 msec avg) [MAX]      0.0033s P70 (      3 calls,   1.113 msec avg) [min]
+            DIPOLE_transverse :      0.0814s P45 [MAX]      0.0068s P60 [min]
+                     io_QINDX :      0.0100s P77 (      2 calls,   5.023 msec avg) [MAX]      0.0070s P4 (      2 calls,   3.489 msec avg) [min]
+                  io_KB_pwscf :      0.0693s P98 (     38 calls,   1.824 msec avg) [MAX]      0.0096s P60 (      3 calls,   3.214 msec avg) [min]
+                      io_GROT :      0.0124s P108 (      3 calls,   4.122 msec avg) [MAX]      0.0097s P39 (      3 calls,   3.217 msec avg) [min]
+                  WF_load_FFT :      0.0397s P38 (      7 calls,   5.678 msec avg) [MAX]      0.0218s P91 (      3 calls,   7.278 msec avg) [min]
+                        io_WF :      0.0529s P33 (     36 calls,   1.471 msec avg) [MAX]      0.0276s P92 (     18 calls,   1.536 msec avg) [min]
+                   io_DIPOLES :      0.0592s P49 (     43 calls,   1.378 msec avg) [MAX]      0.0306s P5 (     13 calls,   2.353 msec avg) [min]
+                  io_fragment :      0.1179s P57 (    125 calls,   0.943 msec avg) [MAX]      0.0547s P92 (     57 calls,   0.959 msec avg) [min]
+                  io_Overlaps :      0.0776s P57 (     69 calls,   1.125 msec avg) [MAX]      0.0575s P4 (     39 calls,   1.475 msec avg) [min]
+               eval_G_minus_G :      0.0955s P90 [MAX]      0.0745s P82 [min]
+              DIPOLE_overlaps :      0.3723s P20 [MAX]      0.3548s P25 [min]
+       DIPOLE_buil_covariants :      0.3980s P20 [MAX]      0.3741s P87 [min]
+                      Dipoles :     27.6710s P20 [MAX]      0.6069s P49 [min]
+                NL Integrator :     87.6800s P87 ( 564012 calls,   0.000 sec avg) [MAX]     79.1412s P40 ( 532678 calls,   0.000 sec avg) [min]
+             NL Berry Pol NEQ :    164.2588s P41 ( 564013 calls,   0.000 sec avg) [MAX]    143.4259s P19 ( 532679 calls,   0.000 sec avg) [min]
+               NL Hamiltonian :    432.3750s P86 (1128024 calls,   0.000 sec avg) [MAX]    333.9754s P17 (1065356 calls,   0.000 sec avg) [min]
+
+ [08] Game Over & Game summary
+ =============================
+
+ 07/12/2022 at 16:53 yambo_nl @ asellota14 [start]
+ 07/12/2022 at 17:08                       [end]
+
+ Timing   [Min/Max/Average]: 11m-32s/13m-09s/12m-07s
+             [Time-Profile]: 12m-03s
+
+ .-ACKNOWLEDGMENT
+ |
+ | The users of YAMBO have little formal obligations with respect to
+ | the YAMBO group (those specified in the GNU General Public
+ | License, http://www.gnu.org/copyleft/gpl.txt). However, it is
+ | common practice in the scientific literature, to acknowledge the
+ | efforts of people that have made the research possible. In this
+ | spirit, please find below the reference we kindly ask you to use
+ | in order to acknowledge YAMBO
+ |
+ | Many-body perturbation theory calculations using the yambo code
+ | D. Sangalli, A. Ferretti, H. Miranda, C. Attaccalite, I. Marri, E. Cannuccia, P. Melo,
+ | M Marsili, F Paleari, A Marrazzo, G Prandini, P Bonfà, M O Atambo, F Affinito,
+ | M Palummo, A Molina-Sánchez, C Hogan, M Grüning, D Varsano and A Marini.
+ | J. Phys.: Condens. Matter 31, 325902 (2019).
+ |
+ | Yambo: An ab initio tool for excited state calculations
+ | A. Marini, C. Hogan, M. Grüning, D. Varsano
+ | Computer Physics Communications 180, 1392 (2009).
+ |
+  
+ .-Input file  out_job05_shg/i5-nl-shg_job05
+ | nloptics                         # [R] Non-linear spectroscopy
+ | BoseTemp= 0.000000         eV    # Bosonic Temperature
+ | NL_CPU= "28.4"                   # [PARALLEL] CPUs for each role
+ | NL_ROLEs= "w.k"                  # [PARALLEL] CPUs roles (w,k)
+ | DIP_CPU= "4.2.14"                # [PARALLEL] CPUs for each role
+ | DIP_ROLEs= "v.c.k"               # [PARALLEL] CPUs roles (k,c,v)
+ | FFTGvecs=  3951            RL    # [FFT] Plane-waves
+ | % NLBands
+ |   1 |  8 |                           # [NL] Bands range
+ | %
+ | NLverbosity= "low"               # [NL] Verbosity level (low | high)
+ | NLstep= 0.007500           fs    # [NL] Time step length
+ | NLtime= 235.0000           fs    # [NL] Simulation Time
+ | NLintegrator= "INVINT"           # [NL] Integrator ("EULEREXP/RK2/RK4/RK2EXP/HEUN/INVINT/CRANKNIC")
+ | NLCorrelation= "IPA"             # [NL] Correlation ("IPA/HARTREE/TDDFT/LRC/LRW/JGM/SEX")
+ | NLLrcAlpha= 0.000000             # [NL] Long Range Correction
+ | % NLEnRange
+ |   0.20000 | 10.00000 |         eV    # [NL] Energy range
+ | %
+ | NLEnSteps=  501                  # [NL] Energy steps
+ | NLDamping= 0.040000        eV    # [NL] Damping (or dephasing)
+ | #EvalCurrent                   # [NL] Evaluate the current
+ | HARRLvcs= 21817            RL    # [HA] Hartree     RL components
+ | EXXRLvcs= 21817            RL    # [XX] Exchange    RL components
+ | % ExtF_Dir
+ |  0.707107 | 0.707107 | 0.000000 |        # [NL ExtF] Field Versor
+ | %
+ | ExtF_kind= "SIN"                 # [NL ExtF] Kind(SIN|SOFTSIN|RES|ANTIRES|GAUSS|DELTA|QSSIN)
+ | ExtF_Tstart= 0.007500      fs    # [NL ExtF] Initial Time
+ | % GfnQP_E
+ |  3.300000 | 1.000000 | 1.000000 |        # [EXTQP G] E parameters  (c/v) eV|adim|adim
+ | %

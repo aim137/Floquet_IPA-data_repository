@@ -1,0 +1,5 @@
+&bands
+  outdir = 'run_output'
+  prefix = 'Silicon'
+ filband = 'bands_Silicon'
+/

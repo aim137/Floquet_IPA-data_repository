@@ -1,0 +1,42 @@
+&control
+  calculation = 'nscf',
+  prefix = 'MoS2_2D',
+  outdir = 'run_output'
+  pseudo_dir = 'PPs',
+  wf_collect=.true.
+  nstep = 200 
+  verbosity = 'high' 
+/
+&system
+  ibrav = 4,
+  celldm(1)= 5.877207636
+  celldm(3)= 5.1044648850
+  nat = 3,
+  ntyp = 2,
+  ecutwfc = 60,
+  occupations = 'smearing'
+  smearing = 'gaussian'
+  degauss = 1.7d-03
+  nbnd = 40
+  force_symmorphic=.true.
+/
+&electrons
+  electron_maxstep = 100
+  conv_thr = 1.0d-10
+  mixing_mode = 'plain'
+  mixing_beta = 0.7
+  mixing_ndim = 8
+  diagonalization = 'david'
+  diago_david_ndim = 4
+  diago_full_acc = .true.
+  diago_thr_init =  1.0d-6
+/
+ATOMIC_SPECIES
+Mo   95.940  Mo_SR_withPS_PZ.UPF
+ S   32.065  S.pz-hgh.UPF
+ATOMIC_POSITIONS ( crystal )
+Mo 0.333333333 0.666666667 0.000000000
+ S 0.666666667 0.333333333 0.097783324
+ S 0.666666667 0.333333333 -0.097783324
+K_POINTS (automatic)
+06 06 01 0 0 0

@@ -1,0 +1,38 @@
+&control
+  calculation = 'nscf',
+  prefix = 'hBN_2D',
+  outdir = 'run_output'
+  pseudo_dir = 'PPs',
+  wf_collect=.true.
+  nstep = 200 
+  verbosity = 'high' 
+/
+&system
+  ibrav = 4,
+  celldm(1)= 4.716
+  celldm(3)= 7.
+  nat = 2,
+  ntyp = 2,
+  ecutwfc = 40,
+  nbnd = 20
+  force_symmorphic=.true.
+/
+&electrons
+  electron_maxstep = 100
+  conv_thr = 1.0d-10
+  mixing_mode = 'plain'
+  mixing_beta = 0.7
+  mixing_ndim = 8
+  diagonalization = 'david'
+  diago_david_ndim = 4
+  diago_full_acc = .true.
+  diago_thr_init =  1.0d-6
+/
+ATOMIC_SPECIES
+ B 10 B.pz-vbc.UPF
+ N 14 N.pz-vbc.UPF
+ATOMIC_POSITIONS ( crystal )
+B  0.6666667  0.3333333  0.0000000
+N -0.6666667 -0.3333333  0.0000000
+K_POINTS (automatic)
+48 48 01 0 0 0

@@ -1,0 +1,55 @@
+#                                                                     
+#  __  __   ________   ___ __ __    _______   ______                  
+# /_/\/_/\ /_______/\ /__//_//_/\ /_______/\ /_____/\                 
+# \ \ \ \ \\::: _  \ \\::\| \| \ \\::: _  \ \\:::_ \ \                
+#  \:\_\ \ \\::(_)  \ \\:.      \ \\::(_)  \/_\:\ \ \ \               
+#   \::::_\/ \:: __  \ \\:.\-/\  \ \\::  _  \ \\:\ \ \ \              
+#     \::\ \  \:.\ \  \ \\. \  \  \ \\::(_)  \ \\:\_\ \ \             
+#      \__\/   \__\/\__\/ \__\/ \__\/ \_______\/ \_____\/             
+#                                                                     
+#                                                                     
+# Version 5.1.0 Revision 20443 Hash (prev commit) 50993453a           
+#                   Branch is devel-fl                                
+#               MPI+SLK+SLEPC+HDF5_IO Build                           
+#                http://www.yambo-code.org                            
+#
+#
+#     E [eV]            X/Im[cm/stV](x)    X/Re[cm/stV](x)    X/Im[cm/stV](y)    X/Re[cm/stV](y)    X/Im[cm/stV](z)    X/Re[cm/stV](z)
+#
+      1.0000000         0.44621183E-20     0.46916509E-08     0.44619488E-20    -0.47287347E-08    -0.21797318E-24     0.24404515E-06
+# 
+# 07/28/2022 at 08:58 yambo_nl @ asellota05 [start]
+# 07/28/2022 at 09:02                       [end]
+#  
+# Timing   [Min/Max/Average]: 03m-23s/04m-27s/04m-11s
+#
+# .-Input file  out_job04_LR_hd/i4-fl-LR_job04
+# | floptics                         # [R] Floquet approach to Non-linear spectroscopy
+# | BoseTemp= 0.000000         eV    # Bosonic Temperature
+# | NL_CPU= "112"                    # [PARALLEL] CPUs for each role
+# | NL_ROLEs= "k"                    # [PARALLEL] CPUs roles (w,k)
+# | DIP_CPU= "4.2.14"                # [PARALLEL] CPUs for each role
+# | DIP_ROLEs= "v.c.k"               # [PARALLEL] CPUs roles (k,c,v)
+# | % NLBands
+# |   2 | 10 |                           # [NL] Bands range
+# | %
+# | % NLEnRange
+# |  1.000000 | 6.000000 |         eV    # [NL] Energy range
+# | %
+# | NLEnSteps= 1                     # [NL] Energy steps
+# | NLDamping= 0.040000        eV    # [NL] Damping (or dephasing)
+# | NLCorrelation= "IPA"             # [NL] Correlation ("IPA/HARTREE/TDDFT/LRC/LRW/JGM/SEX")
+# | HARRLvcs= 10417            RL    # [HA] Hartree     RL components
+# | EXXRLvcs= 10417            RL    # [XX] Exchange    RL components
+# | % ExtF_Dir
+# |  0.707107 | 0.707107 | 0.000000 |        # [NL ExtF] Field Versor
+# | %
+# | Xorder= 1                        # [FL] Max order of the response/exc functions
+# | Xadd_mode= 3                     # [FL] Additional modes to ensure convercence
+# | Xthresh_1= 0.10000E-12           # [FL] Self-consistent threshold on 1st order response function
+# | Xthresh_2= 0.100000E-5           # [FL] Self-consistent threshold on 2nd order response function
+# | Xthresh_3= 0.10000E-11           # [FL] Self-consistent threshold on 3rd order response function
+# | FL_solver= "D"                   # [FL] Eigenproblem solver mode ("(D)IAGONALIZATION/(L)ANCZOS")
+# | FL_deg_thresh= 0.100000E-6       # [FL] Degeneracy threshold in KS band structure
+# | FL_deg_lift= 0.100000E-3         # [FL] Degeneracy lifting of KS band structure
+# | FL_max_it= 10                    # [FL] Maximum number of iterations

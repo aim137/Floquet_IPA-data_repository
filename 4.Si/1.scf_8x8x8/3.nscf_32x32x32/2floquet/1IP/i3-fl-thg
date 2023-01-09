@@ -1,0 +1,43 @@
+#                                                                     
+#                                                                     
+# Y88b    /   e           e    e      888~~\    ,88~-_                
+#  Y88b  /   d8b         d8b  d8b     888   |  d888   \               
+#   Y88b/   /Y88b       d888bdY88b    888 _/  88888    |              
+#    Y8Y   /  Y88b     / Y88Y Y888b   888  \  88888    |              
+#     Y   /____Y88b   /   YY   Y888b  888   |  Y888   /               
+#    /   /      Y88b /          Y888b 888__/    `88_-~                
+#                                                                     
+#                                                                     
+# Version 5.1.0 Revision 20443 Hash (prev commit) 50993453a           
+#                   Branch is devel-fl                                
+#              MPI+SLK+SLEPC+HDF5_IO Build                            
+#               http://www.yambo-code.org                             
+#
+floptics                         # [R] Floquet approach to Non-linear spectroscopy
+% NLBands
+  1 | 7 |                           # [NL] Bands range
+%
+% NLEnRange
+ 0.200000 | 2.000000 |         eV    # [NL] Energy range
+%
+NLEnSteps=  251                   # [NL] Energy steps
+NLDamping= 0.150000        eV    # [NL] Damping (or dephasing)
+NLCorrelation= "IPA"             # [NL] Correlation ("IPA/HARTREE/TDDFT/LRC/LRW/JGM/SEX")
+% ExtF_Dir
+ 1.000000 | 0.000000 | 0.000000 |        # [NL ExtF] Field Versor
+%
+ExtF_Int=0.1000E+8         kWLm2 # [NL ExtF] Intensity
+Xorder= 3                        # [FL] Max order of the response/exc functions
+Xadd_mode= 2                     # [FL] Additional modes to ensure convercence
+Xthresh_1= 0.100000              # [FL] Self-consistent threshold on 1st order response function
+Xthresh_2= 0.100000              # [FL] Self-consistent threshold on 2nd order response function
+Xthresh_3= 0.100000              # [FL] Self-consistent threshold on 3rd order response function
+FL_solver= "D"                   # [FL] Eigenproblem solver mode ("(D)IAGONALIZATION/(L)ANCZOS")
+FL_deg_thresh= 0.100000E-4       # [FL] Degeneracy threshold in KS band structure
+FL_deg_lift= 0.100000E-1         # [FL] Degeneracy lifting of KS band structure
+S_inv_mode= "N"                  # [FL] Inversion method ("(N)UMERICAL/(D)UFFIN/(P)ERTURBATIVE")
+FL_beta= 1.000000                # [FL] Mixing beta
+FL_max_it= 21                    # [FL] Maximum number of iterations
+% GfnQP_E
+ 0.600000 | 1.000000 | 1.000000 |        # [EXTQP G] E parameters  (c/v) eV|adim|adim
+%
